@@ -18,15 +18,15 @@ let db: any;
 
 //use the setupDb function to setup the database and then start the server
 (async () => {
-  db = await setupDb();
-  
-  //use the suggestion and comment routes with the database object exported from db.ts
-  app.use('/api/suggestions', suggestionRoutes(db));
-  app.use('/api/comments', commentRoutes(db));
+    db = await setupDb();
+
+    //use the suggestion and comment routes with the database object exported from db.ts
+    app.use('/api/suggestions', suggestionRoutes(db));
+    app.use('/api/comments', commentRoutes(db));
 
 
-  //start the server on the specified port and log a message to the console
-  app.listen(port, () => {
-    console.log(`The Server is running at http://localhost:${port}, you better catch it!`);
-  });
+    //start the server on the specified port and log a message to the console
+    app.listen(port, () => {
+        console.log(`The Server is running at http://localhost:${port}, you better catch it!`);
+    });
 })();

@@ -7,12 +7,12 @@ export interface Suggestion {
     description: string;
     author: string;
     createdAt: string;
-  }
-  
-  export interface Comment {
+}
+
+export interface Comment {
     id: number;
     suggestionId: number;
     content: string;
     author: string;
     createdAt: string;
-  }
+}
